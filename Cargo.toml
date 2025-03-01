@@ -8,7 +8,6 @@ edition = "2021"
 [workspace]
 members = [
     "node",
-    "pallets/template",
     "pallets/derivative",
     "runtime",
 ]
@@ -20,9 +19,6 @@ warp-runtime = { path = "runtime", default-features = false }
 
 # warp pallets
 pallet-derivative = { path = "pallets/derivative", default-features = false }
-# TODO: remove this
-pallet-template = { path = "pallets/template", default-features = false }
-
 
 
 # substrate pallets

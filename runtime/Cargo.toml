@@ -17,6 +17,8 @@ substrate-wasm-builder = { optional = true, workspace = true, default-features =
 docify = { workspace = true }
 
 [dependencies]
+pallet-derivative.workspace = true
+
 codec = { features = ["derive"], workspace = true }
 hex-literal = { optional = true, workspace = true, default-features = true }
 log = { workspace = true }
@@ -24,7 +26,6 @@ scale-info = { features = ["derive"], workspace = true }
 smallvec = { workspace = true, default-features = true }
 docify = { workspace = true }
 serde_json = { workspace = true, default-features = false }
-pallet-template.workspace = true
 frame-benchmarking = { optional = true, workspace = true }
 frame-executive.workspace = true
 frame-metadata-hash-extension.workspace = true
@@ -75,6 +76,8 @@ parachain-info.workspace = true
 [features]
 default = ["std"]
 std = [
+	"pallet-derivative/std",
+
 	"codec/std",
 	"cumulus-pallet-aura-ext/std",
 	"cumulus-pallet-parachain-system/std",
@@ -99,7 +102,6 @@ std = [
 	"pallet-balances/std",
 	"pallet-collator-selection/std",
 	"pallet-message-queue/std",
-	"pallet-template/std",
 	"pallet-session/std",
 	"pallet-sudo/std",
 	"pallet-timestamp/std",
@@ -130,6 +132,8 @@ std = [
 ]
 
 runtime-benchmarks = [
+	"pallet-derivative/runtime-benchmarks",
+
 	"cumulus-pallet-parachain-system/runtime-benchmarks",
 	"cumulus-pallet-session-benchmarking/runtime-benchmarks",
 	"cumulus-pallet-xcmp-queue/runtime-benchmarks",
@@ -143,7 +147,6 @@ runtime-benchmarks = [
 	"pallet-balances/runtime-benchmarks",
 	"pallet-collator-selection/runtime-benchmarks",
 	"pallet-message-queue/runtime-benchmarks",
-	"pallet-template/runtime-benchmarks",
 	"pallet-sudo/runtime-benchmarks",
 	"pallet-timestamp/runtime-benchmarks",
 	"pallet-xcm/runtime-benchmarks",
@@ -156,6 +159,8 @@ runtime-benchmarks = [
 ]
 
 try-runtime = [
+	"pallet-derivative/try-runtime",
+
 	"cumulus-pallet-aura-ext/try-runtime",
 	"cumulus-pallet-parachain-system/try-runtime",
 	"cumulus-pallet-xcm/try-runtime",
@@ -169,7 +174,6 @@ try-runtime = [
 	"pallet-balances/try-runtime",
 	"pallet-collator-selection/try-runtime",
 	"pallet-message-queue/try-runtime",
-	"pallet-template/try-runtime",
 	"pallet-session/try-runtime",
 	"pallet-sudo/try-runtime",
 	"pallet-timestamp/try-runtime",

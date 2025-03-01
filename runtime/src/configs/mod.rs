@@ -278,7 +278,7 @@ impl pallet_collator_selection::Config for Runtime {
 }
 
 /// Configure the pallet template in pallets/template.
-impl pallet_template::Config for Runtime {
+impl pallet_derivative::Config for Runtime {
 	type RuntimeEvent = RuntimeEvent;
-	type WeightInfo = pallet_template::weights::SubstrateWeight<Runtime>;
+	type WeightInfo = pallet_derivative::weights::SubstrateWeight<Runtime>;
 }

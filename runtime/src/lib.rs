@@ -305,9 +305,9 @@ mod runtime {
 	#[runtime::pallet_index(33)]
 	pub type MessageQueue = pallet_message_queue;
 
-	// Template
+	// warp-edge pallets
 	#[runtime::pallet_index(50)]
-	pub type TemplatePallet = pallet_template;
+	pub type Derivative = pallet_derivative;
 }
 
 #[docify::export(register_validate_block)]
